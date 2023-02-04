@@ -1,3 +1,5 @@
+package src;
+
 public class BedRoom {
     BedSize bedSize;
     private boolean tv = false;

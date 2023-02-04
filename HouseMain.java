@@ -1,11 +1,13 @@
-import java.util.*;
+package src;
 
+import java.util.*;
+import src.*;
 public class HouseMain {
     Kitchen kitchen = new Kitchen();
     DinningRoom dinningRoom = new DinningRoom();
     LivingRoom livingRoom = new LivingRoom();
     List<RestRoom> restRoom = new ArrayList<RestRoom>();
-    List<List<BedRoom>> bedRoom = new ArrayList<List<BedRoom>>();
+    List<BedRoom> bedRoom = new ArrayList<BedRoom>();
     Yard yard;
 
     public DinningRoom getDinningRoom() {
@@ -22,10 +24,6 @@ public class HouseMain {
 
     public Yard getYard() {
         return yard;
-    }
-
-    public List<List<BedRoom>> getBedRoom() {
-        return bedRoom;
     }
 
     public List<RestRoom> getRestRoom() {
@@ -53,6 +51,6 @@ public class HouseMain {
     }
 
     public void addBedRoom(List<BedRoom> newBedRoom) {
-        bedRoom.add(newBedRoom);
+        bedRoom.add((BedRoom) newBedRoom);
     }
 }

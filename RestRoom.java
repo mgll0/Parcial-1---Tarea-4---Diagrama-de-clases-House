@@ -1,3 +1,5 @@
+package src;
+
 public class RestRoom {
     private boolean showerCabin = false;
     private int width = 0;

@@ -1,3 +1,5 @@
+package src;
+
 public class LivingRoom {
     private int windows = 0;
     private boolean tv = false;

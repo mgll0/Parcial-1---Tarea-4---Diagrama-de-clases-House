@@ -1,3 +1,5 @@
+package src;
+
 public class Yard {
     private boolean grass = false;
     private int width = 0;

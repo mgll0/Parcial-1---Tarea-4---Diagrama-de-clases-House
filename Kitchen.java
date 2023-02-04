@@ -1,3 +1,5 @@
+package src;
+
 public class Kitchen {
     private boolean stove = false;
     private boolean sink = false;

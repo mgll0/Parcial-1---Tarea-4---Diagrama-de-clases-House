@@ -1,3 +1,5 @@
+package src;
+
 public class DinningRoom {
     private int chairsCapacity = 0;
     private int windows = 0;
