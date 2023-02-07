@@ -1,14 +1,18 @@
 package src;
 
-import java.util.*;
-import src.*;
+import src.Room_Type.*;
+
 public class HouseMain {
-    Kitchen kitchen = new Kitchen();
-    DinningRoom dinningRoom = new DinningRoom();
-    LivingRoom livingRoom = new LivingRoom();
-    List<RestRoom> restRoom = new ArrayList<RestRoom>();
-    List<BedRoom> bedRoom = new ArrayList<BedRoom>();
-    Yard yard;
+    public  static final int MAX_BED_ROOMS = 10;
+    public  static final int MAX_REST_ROOMS = 10;
+
+
+    private Kitchen kitchen = new Kitchen();
+    private DinningRoom dinningRoom = new DinningRoom();
+    private LivingRoom livingRoom = new LivingRoom();
+    private RestRoom[] restRooms = new RestRoom[MAX_REST_ROOMS];
+    private BedRoom[] bedRooms = new BedRoom[MAX_BED_ROOMS];
+    private Yard yard;
 
     public DinningRoom getDinningRoom() {
         return dinningRoom;
@@ -26,9 +30,6 @@ public class HouseMain {
         return yard;
     }
 
-    public List<RestRoom> getRestRoom() {
-        return restRoom;
-    }
 
     public void setDinningRoom(DinningRoom dinningRoom) {
         this.dinningRoom = dinningRoom;
@@ -42,15 +43,21 @@ public class HouseMain {
         this.livingRoom = livingRoom;
     }
 
-    public void addRestRoom(List<RestRoom> newRestRoom) {
-        restRoom.add((RestRoom) newRestRoom);
-    }
 
     public void setYard(Yard yard) {
         this.yard = yard;
     }
 
-    public void addBedRoom(List<BedRoom> newBedRoom) {
-        bedRoom.add((BedRoom) newBedRoom);
+    public void addRoom(BedRoom[] bedRooms, BedRoom newBedRoom) {
+        int n = bedRooms.length;
+        if (n < MAX_BED_ROOMS) {
+            bedRooms[n-1] = newBedRoom;
+        }
+    }
+    public void addRoom(RestRoom[] restRooms, RestRoom newRestRoom) {
+        int n = restRooms.length;
+        if (n < MAX_BED_ROOMS) {
+            restRooms[n-1] = newRestRoom;
+        }
     }
 }

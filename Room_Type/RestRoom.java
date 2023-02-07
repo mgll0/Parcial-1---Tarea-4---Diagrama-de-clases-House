@@ -1,4 +1,4 @@
-package src;
+package src.Room_Type;
 
 public class RestRoom {
     private boolean showerCabin = false;
